@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
+class Images extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "image",
-        "book_id"
+        'file_path',
+        "post_id"
     ];
-    public function book () {
+    public function post () {
 
-        return $this->belongsTo(Book::class);
+        return $this->belongsTo(Post::class);
     }
+
 }

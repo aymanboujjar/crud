@@ -1,3 +1,6 @@
-<div>
-    <!-- Let all your things have their places; let each part of your business have its time. - Benjamin Franklin -->
-</div>
+@extends('layouts.header')
+@section('content')
+    @foreach ($all as $item)
+        <h1>{{ $item->id }}</h1>
+    @endforeach
+@endsection

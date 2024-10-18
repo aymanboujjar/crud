@@ -82,7 +82,7 @@ class StoreController extends Controller
             "priority" => $request->size,
             "catogery" => $request->catogery,
          ]);
-         return back();
+         return back()->with("success","item created ");
     }
 
     /**
@@ -116,6 +116,6 @@ class StoreController extends Controller
     {
         //
         $store->delete();
-        return back();
+        return back()->with("error","item deleted ");
     }
 }

@@ -38,9 +38,11 @@ class CardController extends Controller
                 'image' => $store->image,
                 'quantity' => 1,
             ]);
+            $store->stock --;
+            $store->save();
         }
 
-        return back();
+        return back()->with("success","item added to card  sucssefully");
     }
 
     public function destroy(Card $card)
@@ -52,7 +54,7 @@ class CardController extends Controller
             $card->delete();
         }
     
-        return back();
+        return back()->with("error","item removed from   card  sucssefully");
     }
     
 }

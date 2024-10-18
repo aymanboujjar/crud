@@ -1,5 +1,5 @@
 import './bootstrap';
-
+import  '../sass/app.scss'
 
 let select = document.querySelector(".select")
 let select1 = document.querySelector(".select1")
@@ -10,4 +10,5 @@ select.addEventListener("change",()=>{
 select1.addEventListener("change",()=>{
     a.click()
 })
+
 
